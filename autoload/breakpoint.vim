@@ -117,6 +117,7 @@ function! breakpoint#GetAllBreakpoints()
         endif
     endfor
 
-    call setqflist([] , ' ', {'title': 'Breakpoints', 'lines': lines})
+    call setqflist(lines , ' ')
+    call setqflist([] , 'a', {'title': 'Breakpoints'})
     copen
 endfunction
